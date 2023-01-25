@@ -1,0 +1,45 @@
+<div class="chat-window">
+  <div class="chat-output">
+    <div *ngIf="responses">
+      <div *ngFor="let response of responses">
+        <div *ngIf="response.getType() == 'ai'">
+          <div class="wp-gpt-baloon wp-gpt-ai-baloon">
+            <div class="wp-baloon-inner-container">
+              <div class="wp-gpt-main-text-col">
+                <div class="wp-gpt-text-icon wp-gpt-ai-icon"></div>
+                <p> {{ response.getMessage() }} </p>
+              </div>
+              <div>
+                <button class="btn-green" (click)="copyMessage(response.getMessage())" value="click to copy">Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="response.getType() == 'user'">
+          <div class="wp-gpt-baloon wp-gpt-user-baloon">
+            <div class="wp-baloon-inner-container">
+              <div class="wp-gpt-main-text-col">
+                <div class="wp-gpt-text-icon  wp-gpt-user-icon"></div>
+                <p> {{ response.getMessage() }} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wp-gpt-lower-section">
+    <div class="wp-gpt-errors-container">
+      <p class="wp-gpt-chat-errors">{{error}}</p>
+    </div>
+    <div class="wp-gpt-chat-input">
+      <div class="wp-gpt-chat-input-inner-container">
+        <input #messageInput type="text" placeholder="Invia un messaggio...">
+        <button (click)="sendMessage();">Invia</button>
+      </div>
+    </div>
+  </div>
+</div>

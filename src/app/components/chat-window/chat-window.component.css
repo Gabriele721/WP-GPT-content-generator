@@ -1,0 +1,96 @@
+.wp-gpt-baloon {
+  padding: 15px;
+}
+
+.chat-output {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.wp-gpt-baloon.wp-gpt-ai-baloon {
+  background-color: rgb(247, 247, 248);
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.wp-gpt-main-text-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.wp-gpt-main-text-col p {
+  max-width: 80%;
+}
+
+.wp-gpt-text-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.wp-gpt-ai-icon {
+  background: #03a894;
+}
+
+.wp-gpt-user-icon {
+  background: #d27204;
+}
+
+.wp-baloon-inner-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.wp-gpt-chat-input-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wp-gpt-errors-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-gpt-errors-container .wp-gpt-chat-errors {
+  width: 100%;
+  color: #a10000;
+}
+
+.wp-gpt-chat-input {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-gpt-chat-input input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  color: #8A90A2;
+  border: 1px solid #D5D5D5;
+}
+
+.wp-gpt-chat-input input:focus {
+  outline: none;
+}
+
+.wp-gpt-chat-input button {
+  border-radius: 0 4px 4px 0;
+}
+
+.wp-gpt-lower-section {
+  padding-bottom: 24px;
+}
+
+@media (min-width: 1280px) {
+  .wp-baloon-inner-container, .wp-gpt-chat-input-inner-container, .wp-gpt-chat-errors {
+    max-width: 48rem;
+  }
+}

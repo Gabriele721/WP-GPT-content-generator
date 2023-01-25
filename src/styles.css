@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, p {
+  font-family: sans-serif;
+}
+
+button {
+  text-align: center;
+  padding: 9px;
+  overflow: hidden;
+  border-radius: 4px;
+  text-transform: capitalize;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-green {
+  background: #03a894;
+  color: #ffffff;
+}
